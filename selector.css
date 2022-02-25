@@ -1,0 +1,85 @@
+
+*{
+  /* מרחיב את הבורדר והפדינג כלפי פנים התגית */
+  box-sizing: border-box;
+}
+
+body{
+  background: silver;
+  margin:0;
+  font-family: sans-serif;
+}
+
+.container-fluid{
+  width:100%;
+  /* עושה שוליים פנימים מימין ושמאל */
+  padding:0 16px;
+}
+
+.container{
+  /* max-width - רק כשיחידות המידה בפיקלסים נותנים לירסונסיביות */
+  max-width:700px;
+  /* מיישר את הדיב עצמו לאמצע מבחינת רוחב */
+  margin:0 auto;
+  background: white;
+  padding:8px;
+}
+
+/* מדבר רק עם הבן הישיר של קונטיינר שהוא אייץ */
+.container > h2{
+  color:red;
+}
+
+/* ישפיע על כל תגיות פי שהם אחים של התגית אייץ 2 ומגיעות
+ישר אחריהן בהטמל */
+/* פחות בשימוש */
+.container h2+p {
+  background: yellow;
+  font-weight: bold;
+}
+
+/* attribute selector */
+/* .container img[src="images/icon1.png"]{
+  border:4px solid orange;
+} */
+
+/* *= מחפש שהביטוי שבתוך הגרשיים קיים באטרביוט */
+.container img[src*=".png"]{
+  border:8px solid red;
+}
+
+.container img[width="98"]{
+  border:4px solid blue;
+}
+
+.container a[href="hw2.html"]{
+  color:red;
+}
+
+
+/* selector count */
+/* הסוג הראשון של אותו אבא*/
+/* .container p:first-of-type{ */
+  /* הסוג האחרון בשושלת של אותו אבא */
+.container > p:last-of-type{
+  border:4px dashed red;
+}
+
+/* ייבחר את הפי הרביעי בשושלת הישירה של קונטיינר  */
+.container > p:nth-of-type(4){
+  background: orange;
+}
+/* סמנו את פארא 5 ברקע ירוק עם כתב לבן */
+.container > p:nth-of-type(5){
+  background: green;
+  color:white;
+}
+
+.container article{
+  border:1px solid grey;
+}
+
+/* 2n - קפיצה */
+.container article p:nth-of-type(2n+1){
+  background: aqua;
+}

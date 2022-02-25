@@ -1,0 +1,84 @@
+
+*{
+  /* מרחיב את הבורדר והפדינג כלפי פנים התגית */
+  box-sizing: border-box;
+}
+
+body{
+  background: silver;
+  margin:0;
+  font-family: sans-serif;
+}
+
+.container-fluid{
+  width:100%;
+  /* עושה שוליים פנימים מימין ושמאל */
+  padding:0 16px;
+}
+
+.container{
+  /* max-width - רק כשיחידות המידה בפיקלסים נותנים לירסונסיביות */
+  max-width:700px;
+  /* מיישר את הדיב עצמו לאמצע מבחינת רוחב */
+  margin:0 auto;
+}
+
+nav{
+  min-height: 60px;
+  background: rgb(255, 255, 179);
+}
+
+header{
+  min-height: 120px;
+  background: rgb(186, 102, 219);
+}
+
+main{
+  background: white;
+}
+
+main .container{
+  /* הגובה מומלץ שיהיה אצל התגית שמקבלת פלקס כדי שתמתח אתהילדים  שלה לגובה שלה
+  כי בברירת מחדל גובה של דיב הוא לפי התכולה שלו */
+  min-height: 300px;
+  display: flex;
+}
+
+main .box_left{
+  width:30%;
+  background: violet;
+}
+
+main .box_right{
+  width:70%;
+  background: greenyellow;
+}
+
+.boxes{
+  min-height: 200px ;
+  background: white;
+  display: flex;
+  padding:0;
+}
+
+.boxes aside{
+  width:33.333%;
+}
+
+.boxes .aside1{
+  background: coral;
+}
+
+.boxes .aside2{
+  background: greenyellow;
+}
+
+.boxes .aside3{
+  background: pink;
+}
+
+footer{
+  min-height: 60px;
+  background: grey;
+}
+

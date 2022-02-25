@@ -1,0 +1,49 @@
+
+*{
+  /* מרחיב את הבורדר והפדינג כלפי פנים התגית */
+  box-sizing: border-box;
+}
+
+body{
+  background: silver;
+  margin:0;
+  font-family: sans-serif;
+}
+
+
+.container{
+  /* max-width - רק כשיחידות המידה בפיקלסים נותנים לירסונסיביות */
+  max-width:700px;
+  /* מיישר את הדיב עצמו לאמצע מבחינת רוחב */
+  margin:0 auto;
+  background: white;
+  padding:8px;
+  display: flex;
+  /* הילדים יפלו למטה ברגע שעוברים את ה100 אחוז בשורה
+   */
+   flex-wrap: wrap;
+}
+
+.container .box{
+  width:25%;
+  border:2px solid black;
+  background: orange;
+  min-height: 200px;
+  padding:8px;
+  /* יצירת אנימציה בשינוי של 1 שניות */
+  transition: 1000ms;
+
+}
+
+.container .box:hover{
+  background: blue;
+  color:white;
+  /* width:50%; */
+  /* transform - משפיע רק על הדיב בלי השפעה האחים */
+  /* scale - פרמטר ראשון הרוחב באחוזים, בפרמטר שני הגובה */
+  /* transform: scale(1.5 , 1.5); */
+  /* תזוזה מהמקום שהוא נמצא בו 40 פיקסלים ימינה ו10 פיקסלים למטה */
+  /* transform: translate(40px,10px); */
+  /* סיבוב ב 180 מעלות */
+  transform: rotate(45deg);
+}

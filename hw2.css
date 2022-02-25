@@ -1,0 +1,135 @@
+
+*{
+  /* מרחיב את הבורדר והפדינג כלפי פנים התגית */
+  box-sizing: border-box;
+}
+
+body{
+  background: white;
+  margin:0;
+  font-family: sans-serif;
+}
+
+.container-fluid{
+  width:100%;
+  /* עושה שוליים פנימים מימין ושמאל */
+  padding:0 16px;
+}
+
+.container{
+  /* max-width - רק כשיחידות המידה בפיקלסים נותנים לירסונסיביות */
+  max-width:900px;
+  /* מיישר את הדיב עצמו לאמצע מבחינת רוחב */
+  margin:0 auto;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header{
+  
+  background: black;
+  color:white;
+  /* שוליים תחתיים בינו לבין הדיב של הסטריפ */
+  margin-bottom: 48px;
+}
+
+header .container{
+  min-height: 60px;
+  display: flex;
+  /* מיישר לגובה לאמצע */
+  align-items: center;  
+ 
+}
+
+header h2{
+  margin-right:16px;
+  color:rgb(173, 5, 5);
+}
+
+header a{
+  color:white;
+  padding:0 12px;
+  text-decoration: none;
+}
+
+/* במעבר עכבר */
+header a:hover{
+  color:rgb(173, 5, 5);
+  font-weight: bold;
+}
+
+.strip{
+
+  background: white;
+  margin-bottom: 48px;
+}
+
+.strip .container{
+  min-height: 400px;
+  display: flex;
+}
+
+.strip .big_red_box{
+  width:67%;
+  background: rgb(173, 5, 5);
+  color:white;
+}
+
+.strip .small_box{
+  width:33%;
+  border:1px dashed grey;
+}
+
+.strip .small_box h3{
+  color:white;
+  background: black;
+  text-align: center;
+  /* פדינג ללמעלה למטה */
+  padding:12px 0;
+  /* מבטל שוליים חיצוניים שמגיעים עם כותרת */
+  margin:0;
+}
+
+.strip .small_box p{
+  /* פדינג בימין שמאל של 8 פיקסלים */
+  padding:0 8px;
+}
+
+.strip .small_box a{
+  color:rgb(173, 5, 5);
+  text-decoration: none;
+}
+
+main{
+  background: white;
+  margin-bottom: 48px;
+}
+
+main .container{
+  min-height: 180px;
+  display: flex;
+  justify-content: space-between;
+}
+
+main .box{
+  background:rgb(173, 5, 5); 
+  color:white;
+  width:31%;
+}
+
+main .box h3{
+  background: black;
+  text-align: center;
+  padding:12px 0;
+  margin:0;
+}
+
+main .box p{
+  min-height: 160px;
+  margin:0;
+}
